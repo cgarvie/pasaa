@@ -1,0 +1,18 @@
+div#my_extension {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:300px;
+  background-color:rgba(255,255,255,0.9);
+  color:#000;
+  border-top:1px solid black;
+  z-index:9999;
+  display:none;
+}
+div#my_extension_inner {
+  height:300px;
+  overflow:scroll;
+  padding: 20px 20px 20px 20px;
+  font-size:16px;
+}

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Chrome extension for studying Thai",
+  "description": "Simply activate the extension when on a thai website and then highlight words you don't know.",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      // Change 'matches' attribute to load content
+      // script only in pages you want to.
+      "matches": ["https://*/*", "http://*/*"],
+      "css": ["basic.css"],
+      "js": ["jquery.min.js", "contentscript.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["backgroundpage.js"]
+  },
+  "permissions": ["tts"]
+
+}
