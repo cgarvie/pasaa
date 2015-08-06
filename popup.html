@@ -6,11 +6,12 @@
  -->
 <html>
   <head>
-    <title>My Extension's Popup</title>
+    <title>Popup Settings Menu</title>
     <style>
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
         font-size: 100%;
+        width:300px;
       }
       #status {
         /* avoid an excessively wide status text */
@@ -31,11 +32,28 @@
     <script src="popup.js"></script>
   </head>
   <body>
-      <label><input type="radio" name="status" value="on" />on</label>
+      <table>
+          <dt>Toggle</dt>
+          <dd>
+      <label><input type="radio" name="status" value="on" />on</label><br>
       <label><input type="radio" name="status" value="off" />off</label>
+  </dd>
+            <dt>Language</dt>
+            <dd>
       <select name="lang">
           <option value="thai">Thai</option>
       </select>
-      <button id="submit">save settings</button>
+      </dd>
+            <dt>Font Size</dt>
+          <dd>
+              <label><input type="radio" name="font_size" value="1" />small</label><br>
+              <label><input type="radio" name="font_size" value="2" />med</label><br>
+              <label><input type="radio" name="font_size" value="3" />large</label>
+              </dd>
+             <dt>&nbsp;</dt>
+            <dd>
+              <button id="submit">save settings</button>
+          </dd>
+          </table>
   </body>
 </html>
